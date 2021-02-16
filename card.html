@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        perspective: 1000px;
+        overflow-style: auto;
+    }
+    .card {
+        width: 200px;
+        height: 200px;
+        background-color: gray;
+        transition-duration: 0.6s;
+        transform-style: preserve-3d;
+        margin: 10px;
+        box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    }
+
+    .card > div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+    }
+    .front {
+        background-color: blue;
+        transform: rotateY(180deg);
+    }
+
+    .back {
+        background-color: yellow;
+    }
+
+    .reverse {
+        transform: rotateY(180deg);
+    }
+
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+    <div class="card">
+        <div class="front">
+            <h1>Front</h1>
+        </div>
+        <div class="back">
+            <h1>Back</h1>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var cards = document.querySelectorAll(".card");
+
+    for(var i = 0; i <cards.length; i++){
+        cards[i].addEventListener("click", function(){
+
+            var classValue = this.getAttribute("class");
+
+            console.log(classValue);
+
+            if(classValue === 'card'){
+                this.setAttribute("class","card reverse");
+            }else {
+                this.setAttribute("class","card");
+            }
+
+        }, false);
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

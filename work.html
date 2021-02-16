@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button onclick="create()">create</button>
+  <button onclick="updateUL()">update</button>
+  <button>delete</button>
+  <button>show</button>
+
+  <ul></ul>
+
+<script>
+
+    const ulObj = document.querySelector("ul");
+    //create 버튼 클릭  UL에 li를 생성해서 추가 - createElement createTextNode
+    function create(){
+        console.log("create")
+        var li = document.createElement("li");
+        var text = document.createTextNode("AAA");
+        li.appendChild(text);
+        ulObj.appendChild(li);
+    }
+
+    function updateUL() {
+        //모든 li의 내용물을 ZZZ로 변경  - innerHTML
+        const lis = ulObj.querySelectorAll("li");
+        for (const li of lis) {
+            li.textContent ="ZZZ";
+        }
+
+    }
+
+    function deleteUL(){
+        //모든 li 삭제
+    }
+
+    function show() {
+
+    }
+
+</script>
+</body>
+</html>

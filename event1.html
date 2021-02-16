@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    .outer {
+        width: 300px;
+        height: 500px;
+        padding: 100px;
+        background-color: blue;
+    }
+    .inner {
+        background-color: yellow;
+    }
+</style>
+
+<div class="outer" onclick="outer(event)">
+    <div class="inner">
+        <h1>CLICK</h1>
+    </div>
+</div>
+<script>
+    function outer(event) {
+
+        console.log(event.target);
+    }
+    function inner() {
+        console.log("inner")
+    }
+    function h1(event) {
+        console.log("h1: " + event);
+        event.stopPropagation();
+    }
+</script>
+
+
+</body>
+</html>

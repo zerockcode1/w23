@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doA(v1,v2,v3 ){
+        console.log("v1: " + v1);
+        console.log("v2: " + v2);
+        console.log("v3: " + v3);
+        return v1 + v2 + v3;
+    }
+
+    var doB = doA;
+
+    doA(1)
+    doA(10,20)
+    doA(100,200,300);
+
+
+</script>
+</body>
+</html>

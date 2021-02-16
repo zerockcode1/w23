@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var a = 1;
+
+    function doA(){
+
+        console.log(a);//1
+
+        var a = 10;
+
+        function a() {
+            console.log("3:" + a);
+        }
+        console.log("2------------------" + a);
+    }
+
+    doA();
+
+</script>
+
+</body>
+</html>
